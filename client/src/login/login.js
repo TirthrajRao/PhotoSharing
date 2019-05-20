@@ -47,6 +47,7 @@ export default class Login extends React.Component {
 					)
 				console.log("login successfull");
 				localStorage.setItem('Login', true);
+				localStorage.setItem('curruntUser', JSON.stringify(response));
 				this.props.history.push("/Home");
 				
 
@@ -169,7 +170,8 @@ export default class Login extends React.Component {
 				// alert("Register successfull")
 				console.log("login successfull");
 				localStorage.setItem('Login', true);
-				// this.props.history.push("/display");
+				localStorage.setItem('curruntUser', JSON.stringify(response));
+				this.props.history.push("/Home");
 				// <Redirect to='./display'/>
 			},function(err){
 				console.log(err);
