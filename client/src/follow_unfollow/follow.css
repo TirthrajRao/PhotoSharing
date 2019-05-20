@@ -1,0 +1,8 @@
+.unfollow_model{
+	position: absolute;
+    width: 50%;
+    background-color:white;
+    top: 54%;
+    border:1px solid black;
+    outline: none;
+}
