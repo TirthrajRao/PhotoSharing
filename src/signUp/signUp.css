@@ -1,0 +1,15 @@
+.mdc-card{
+	padding: 20px 50px;
+	margin: 50px auto;
+	width: 38%;
+	background-color: lightgray;
+
+}
+.mdc-text-field, .mdc-layout-grid__inner{
+	margin-top: 15px;
+}
+.mdc-button{
+	margin:30px auto;
+	border-radius: 5px;
+	border: 1px solid;
+}

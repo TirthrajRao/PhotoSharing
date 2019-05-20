@@ -1,0 +1,31 @@
+.mdc-card{
+	padding: 20px 50px;
+	margin: 50px auto;
+	width: 38%;
+	background-color: lightgray;
+
+}
+.mdc-text-field, .mdc-layout-grid__inner{
+	margin-top: 15px;
+}
+.mdc-button{
+	margin:30px 10px;
+	border-radius: 5px;
+	border: 1px solid;
+	margin-left:74px;
+}
+.btn{
+	float: left;
+}
+.btn1{
+	margin-right: 15px;
+}
+.user_details{
+	width:400px;
+	margin:auto;
+	background-color: lightgray;
+	padding: 20px;
+}
+.google_btn{
+	margin-bottom:  10px;
+}
