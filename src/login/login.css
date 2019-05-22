@@ -1,31 +1,80 @@
-.mdc-card{
-	padding: 20px 50px;
-	margin: 50px auto;
-	width: 38%;
-	background-color: lightgray;
-
+body{
+	background-color: #FAFAFA;
 }
-.mdc-text-field, .mdc-layout-grid__inner{
-	margin-top: 15px;
+hr{
+	border-color: light;
 }
-.mdc-button{
-	margin:30px 10px;
-	border-radius: 5px;
-	border: 1px solid;
-	margin-left:74px;
-}
-.btn{
-	float: left;
-}
-.btn1{
-	margin-right: 15px;
-}
-.user_details{
-	width:400px;
-	margin:auto;
-	background-color: lightgray;
+.border_class1{
+	border: 1px solid #e1e0e0;
+	border-radius: 3px;
+	width: 350px;
+	margin: 190px auto;
 	padding: 20px;
+	height: auto;
+	background-color: white;
 }
-.google_btn{
-	margin-bottom:  10px;
+.input_feild{
+	padding: 11px 40px;
+}
+.Button{
+	margin-top: 10px;
+}
+.MuiInput-underline-124 {
+    width: 268px;
+}
+.MuiButton-contained-161{
+	width: 100%;
+	text-transform: capitalize!important;
+	color: white!important;
+	background-color: #3897F0!important;
+}
+.or_class{
+	position: relative;
+	margin: 25px 0px;
+}
+.or_class p{
+    display: table;
+    margin: auto;
+}
+.or_class p:after , .or_class p:before{
+	content: "";
+	height: 1px;
+	width: 40%;
+	position: absolute;
+	background-color: lightgray;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+.or_class p:before{
+	left: 0px;
+}
+.or_class p:after{
+	right: 0px
+}
+.fb_link{
+	color: #385185;
+	text-align: center;
+	font-weight: bold;
+	font-size: 15px;
+}
+.forgot_link{
+	text-align: center;
+	color: #003569;
+	font-size: 12px;
+	margin: 20px 0px;
+}
+.signUp_link_box{
+border: 1px solid #e1e0e0;
+	border-radius: 3px;
+	width: 350px;
+	margin: 50px auto;
+	padding: 20px;
+	height: auto;
+	position: absolute;
+	left: 0;
+	right: 0;
+	background-color: white;
+	font-size: 14px;
+	text-align: center;
 }

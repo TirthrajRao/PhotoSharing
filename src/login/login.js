@@ -12,11 +12,24 @@ import Config from '../config.js';
 import axios from 'axios';
 import Home from '../home/home.js'
 import { Redirect ,browserHistory } from 'react-router';
+import Input from '@material-ui/core/Input';
+import InputLabel from '@material-ui/core/InputLabel';
+import InputAdornment from '@material-ui/core/InputAdornment';
+import FormControl from '@material-ui/core/FormControl';
+import TextField from '@material-ui/core/TextField';
+import Grid from '@material-ui/core/Grid';
+import AccountCircle from '@material-ui/icons/AccountCircle';
+import IconButton from '@material-ui/core/IconButton';
+import Visibility from '@material-ui/icons/Visibility';
+import VisibilityOff from '@material-ui/icons/VisibilityOff';
+import Button from '@material-ui/core/Button';
 
 let config = new Config();
 
 
 export default class Login extends React.Component {
+
+
 	constructor(props){
 		super(props)
 		this.state = {
@@ -51,16 +64,16 @@ export default class Login extends React.Component {
 				this.props.history.push("/Home");
 				
 
-				});
-			}
+			});
+		}
 
-			// this.setState = ({
-				// 	isAuthenticated : true,
-				// 	userId:response.userId,
-				// 	name:response.name,
-				// 	email:response.email,
-				// 	picture:response.picture.data.url
-				// });
+		// this.setState = ({
+			// 	isAuthenticated : true,
+			// 	userId:response.userId,
+			// 	name:response.name,
+			// 	email:response.email,
+			// 	picture:response.picture.data.url
+			// });
 
 			// }
 			this.responseGoogle = response =>{
@@ -107,7 +120,7 @@ export default class Login extends React.Component {
 					callback={this.responseFacebook} />
 					</div>
 					);
-					googleContent = (
+				googleContent = (
 					<div>
 					<GoogleLogin
 					clientId= {config1.GOOGLE_CLIENT_ID}
@@ -117,46 +130,79 @@ export default class Login extends React.Component {
 					cookiePolicy={'single_host_origin'}/>
 					</div>
 					);
-				}
-				return (
-				<div>
-				<div className="mdc-card" >
-				<center><h1>Login</h1></center>
-
-
-				<div className="mdc-text-field">
-				<input type="email" id="my-text-field" className="mdc-text-field__input" name="email" value={this.state.email}  onChange={this.onChange} />
-				<label className="mdc-floating-label" htmlFor="my-text-field">Email</label>
-				<div className="mdc-line-ripple"></div>
-				</div>
-
-				<div className="mdc-text-field">
-				<input type="password" id="my-text-field" className="mdc-text-field__input" name="password" value={this.state.password}  onChange={this.onChange}/>
-				<label className="mdc-floating-label" htmlFor="my-text-field">Password</label>
-				<div className="mdc-line-ripple"></div>
-				</div>
-
-				<button className="mdc-button btn1" onClick={(event)=>this.handleClick(event)}>
-				<span className="mdc-button__label">Login</span>
-				</button>
-				<div className="google_btn btn1">
-				{fbContent}
-				</div>
-				<div className="google_btn btn1">
-				{googleContent}
-				</div>
-
-				</div>
-
-				</div>
-				)
 			}
+			return (
+				<div className="border_class1">
+				<h1>Photosharing</h1>
+				<div className="input_feild">
+				<div>
+				<Grid container spacing={16} alignItems="flex-end" color="primary">
+				<Grid item>
+				<TextField id="input-with-icon-grid" label="Username" />
+				</Grid>
+				</Grid>
+				</div>
+				<div>
+				<Grid container spacing={16} alignItems="flex-end">
+				<Grid item>
+				<TextField id="input-with-icon-grid" label="Password" />
+				</Grid>
+				</Grid>
+				</div>
+				<Button style={{marginTop: 15,height: 33,padding: 0}}className="login_button" variant="contained" size="large">
+				<label>Login</label>
+				</Button>
+				<div className="or_class">
+				<p style={{color:'#aca5a5'}}>OR</p>
+				</div>
+				<div className="fb_link">
+				Log in with Facebook
+				</div>
+				<div className="forgot_link">
+				Forgot Password ?
+				</div>
+				</div>
+				<div className="signUp_link_box">
+				Don't have an account?<Button href="#text-buttons" style={{textTransform: 'capitalize',color: '#3897f0'}}>Sign up </Button>
+				</div>
+				</div>
+
+				// <div>
+				// <div className="mdc-card" >
+				// <center><h1>Login</h1></center>
 
 
-			handleClick(event){
-				console.log('event=============================>',event);
-				console.log(this.setState)
-				var apiBaseUrl = config.getBaseUrl() + "user/login";
+				// <div className="mdc-text-field">
+				// <input type="email" id="my-text-field" className="mdc-text-field__input" name="email" value={this.state.email}  onChange={this.onChange} />
+				// <label className="mdc-floating-label" htmlFor="my-text-field">Email</label>
+				// <div className="mdc-line-ripple"></div>
+				// </div>
+
+				// <div className="mdc-text-field">
+				// <input type="password" id="my-text-field" className="mdc-text-field__input" name="password" value={this.state.password}  onChange={this.onChange}/>
+				// <label className="mdc-floating-label" htmlFor="my-text-field">Password</label>
+				// <div className="mdc-line-ripple"></div>
+				// </div>
+
+				// <button className="mdc-button btn1" onClick={(event)=>this.handleClick(event)}>
+				// <span className="mdc-button__label">Login</span>
+				// </button>
+				// <div className="google_btn btn1">
+				// {fbContent}
+				// </div>
+				// <div className="google_btn btn1">
+				// {googleContent}
+				// </div>
+
+				// </div>
+
+				// </div>
+				)
+		}
+		handleClick(event){
+			console.log('event=============================>',event);
+			console.log(this.setState)
+			var apiBaseUrl = config.getBaseUrl() + "user/login";
 			// var self = this;
 			var payload={
 				"email":this.state.email,

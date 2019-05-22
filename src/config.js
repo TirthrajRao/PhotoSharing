@@ -2,7 +2,7 @@ class Config {
 
 	getBaseUrl(){
 		let baseurl;
-	 return baseurl ="http://localhost:4000/";
+	 return baseurl ="http://132.140.160.69:4000/";
 	
 	}
 	// getMediaUrl(){

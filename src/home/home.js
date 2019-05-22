@@ -1,7 +1,5 @@
 
 import React from 'react';
-import * as mdc from 'material-components-web';
-import "material-components-web/dist/material-components-web.min.css";
 import './home.css';
 import { Link } from 'react-router-dom';
 import Config from '../config.js';
@@ -36,7 +34,7 @@ export default class signUp extends React.Component{
 			</button>
 
 			<button className="mdc-button btn1" onClick={(event)=>this.handleClick(event)}>
-			<span className="mdc-button__label">Profile</span>
+			<Link to={"/profile"}><span className="mdc-button__label">Profile</span></Link>
 			</button>
 
 			<Link to={"/followUnfollow"}><button className="mdc-button btn1">
